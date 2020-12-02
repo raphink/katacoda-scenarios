@@ -1,6 +1,3 @@
-# Loaded files and lenses
-
-
 Inside `/augeas`, you'll find information about the Augeas API.
 For example, `/augeas/load/` contains all the informations about the lenses
 loaded by Augeas, and the files associated to them.

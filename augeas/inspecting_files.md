@@ -1,6 +1,3 @@
-# Inspecting files
-
-
 Augeas parses configuration files on disk (also called the "concrete view")
 and converts them to a tree representation in memory (called the "abstract
 view").
