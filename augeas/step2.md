@@ -31,3 +31,7 @@ root:
 - `/augeas` to control the API itself
 - `/files` to expose the content of the files Augeas parsed
 
+
+```
+ls /
+```{{execute}}
