@@ -11,6 +11,7 @@ Install Terraform:
 git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 export PATH="$HOME/.tfenv/bin:$PATH"
 tfenv install latest
+tfenv use latest
 ```{{execute}}
 
 
