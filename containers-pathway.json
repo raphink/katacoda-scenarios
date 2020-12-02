@@ -1,5 +1,11 @@
 {
   "title": "Containers",
   "description": "Containers",
-  "courses": []
+  "courses": [
+    {
+      "course_id": "1-run",
+      "title": "Run containers",
+      "description": "Run containers in Docker"
+    }
+  ]
 }
