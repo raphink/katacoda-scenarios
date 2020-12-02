@@ -44,9 +44,15 @@ module "cluster" {
 </pre>
 
 
-## Launch the stack
+Set your cluster name:
 
 ```
 export CLUSTER_NAME=default
+```{{execute}}
+
+
+## Launch the stack
+
+```
 wget -O- "https://raw.githubusercontent.com/camptocamp/camptocamp-devops-stack/v0.15.0/scripts/provision.sh" | sh
 ```{{execute}}
