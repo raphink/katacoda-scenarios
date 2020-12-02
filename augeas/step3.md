@@ -1,29 +1,30 @@
-# Inspecting files
+# Loaded files and lenses
 
 
-Augeas parses configuration files on disk (also called the "concrete view")
-and converts them to a tree representation in memory (called the "abstract
-view").
-
-This representation can be queried under the `/files` nodes, where each file
-can be found according to its location on disk.
-
-For example, you can inspect the representation for `/etc/hostname` in the
-Augeas tree:
+Inside `/augeas`, you'll find information about the Augeas API.
+For example, `/augeas/load/` contains all the informations about the lenses
+loaded by Augeas, and the files associated to them.
 
 ```
-print /files/etc/hostname
+print /augeas/load/Hostname
 ```{{execute}}
 
 
-which maps the current `etc/hostname`{{open}} file.
+The previous command displays information on the `Hostname` module. The lens is
+preceded by an arobase (`@Hostname`), indicating that Augeas loaded it
+automatically at start time.
 
+There are two numbered `incl` nodes (respectively `incl[1]` and `incl[2]`), for
+the two files that are automatically associated with the `Hostname.lns` lens.
 
-You can also use a relative path and ommit `/files/`, because the
-relative context (stored inside the `/augeas/context` node) defaults to
-`/files`:
+You can find metadata on these files by looking into `/augeas/files`:
 
 
 ```
-print etc/hostname
+print /augeas/files/etc/hostname
 ```{{execute}}
+
+
+This confirms that this file is known by Augeas, and was successfully
+parsed by the `@Hostname` lens.
+
