@@ -20,6 +20,10 @@
       {
         "title": "Inspecting files",
         "text": "inspecting_files.md"
+      },
+      {
+        "title": "Querying the tree",
+        "text": "match.md"
       }
     ],
     "intro": {
