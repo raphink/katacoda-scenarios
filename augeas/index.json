@@ -24,6 +24,14 @@
       {
         "title": "Querying the tree",
         "text": "match.md"
+      },
+      {
+        "title": "Modifying the tree",
+        "text": "set.md"
+      },
+      {
+        "title": "Saving the tree",
+        "text": "save.md"
       }
     ],
     "intro": {
