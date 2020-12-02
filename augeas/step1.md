@@ -17,14 +17,11 @@ ls /usr/share/augeas/lenses/dist/
 Each module provides one or more (usually one) Augeas lens. For example, the
 `Fstab` module (from the `fstab.aug` file) provides the `Fstab.lns` lens.
 
-
-While Augeas is a C library, the `augeas-tools` package provides the `augtool`
-command line, allowing you to easily interact with Augeas from the command
-line.
-
-Let's fire up `augtool`:
+Let's have a look at a simple module, `Hostname`:
 
 ```
-augtool
+cat /usr/share/augeas/lenses/dist/hostname.aug
 ```{{execute}}
 
+You can see the name of the module at the top of the file, and the definition
+of the lens, `Hostname.lns`.
