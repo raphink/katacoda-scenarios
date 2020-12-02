@@ -6,7 +6,6 @@
 
 ```
 snap install helm --classic
-snap install terraform
 ```{{execute}}
 
 
