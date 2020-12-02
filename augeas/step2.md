@@ -4,10 +4,23 @@ While Augeas is a C library, the `augeas-tools` package provides the `augtool`
 command line, allowing you to easily interact with Augeas from the command
 line.
 
-Let's fire up `augtool`:
+
+## Using a fake root
+
+
+Since Augeas modifies configuration files, let's work on a copy of `/etc` in
+order to avoid breaking the system:
+
 
 ```
-augtool
+cp -a /etc fakeroot
+```{{execute}}
+
+
+Let's fire up `augtool`, pointing to the current directory as the fake root:
+
+```
+augtool -r .
 ```{{execute}}
 
 
