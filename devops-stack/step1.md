@@ -8,7 +8,7 @@ mkdir terraform
 ```{{execute}}
 
 
-<pre class="file" data-filename="main.tf" data-target="replace">
+<pre class="file" data-filename="my-project/terraform/main.tf" data-target="replace">
 module "cluster" {
   source = "git::https://github.com/camptocamp/camptocamp-devops-stack.git//modules/k3s-docker?ref=v0.15.0"
 
