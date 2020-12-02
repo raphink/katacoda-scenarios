@@ -13,14 +13,15 @@ order to avoid breaking the system:
 
 
 ```
-cp -a /etc fakeroot
+mkdir fakeroot
+cp -a /etc fakeroot/
 ```{{execute}}
 
 
 Let's fire up `augtool`, pointing to the current directory as the fake root:
 
 ```
-augtool -r .
+augtool -r fakeroot/
 ```{{execute}}
 
 
