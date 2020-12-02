@@ -5,7 +5,7 @@ view").
 This representation can be queried under the `/files` nodes, where each file
 can be found according to its location on disk.
 
-For example, you can inspect the representation for `/etc/hosts`{{open}} in the
+For example, you can inspect the representation for `fakeroot/etc/hosts`{{open}} in the
 Augeas tree:
 
 ```
@@ -21,3 +21,13 @@ relative context (stored inside the `/augeas/context` node) defaults to
 print etc/hosts
 ```{{execute}}
 
+
+By comparing with the `fakeroot/etc/hosts`{{open}} file, you can see that:
+
+- Each comment line is represented by a `#comment` node, with a value
+- Each host line is represented by a sequentially numbered node
+- The parameters for each host are labeled according to their column, so each
+  host node contains:
+  - 1 `ipaddr` node
+  - 1 `canonical` node
+  - 0, 1 or more `alias` nodes
