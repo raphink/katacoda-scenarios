@@ -1,3 +1,6 @@
+Most GNU/Linux distributions provide Augeas as a standard package. On Debian
+based operating systems, you can install Augeas with:
+
 ```
 apt-get install -y augeas-lenses augeas-tools
 ```{{execute}}
