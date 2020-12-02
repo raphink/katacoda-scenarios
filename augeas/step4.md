@@ -16,7 +16,7 @@ print /files/etc/hostname
 ```{{execute}}
 
 
-which maps the current `etc/hostname`{{open}} file.
+which in our case maps to the `fakeroot/etc/hostname`{{open}} file.
 
 
 You can also use a relative path and ommit `/files/`, because the
