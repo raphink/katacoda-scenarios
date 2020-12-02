@@ -1,6 +1,17 @@
 # Start K3s stack
 
 
+## Install dependencies
+
+
+```
+snap install helm --classic
+snap install terraform
+```{{execute}}
+
+
+## Create project
+
 ```
 mkdir my-project
 cd my-project
@@ -19,3 +30,11 @@ module "cluster" {
   target_revision = "v0.15.0"
 }
 </pre>
+
+
+## Launch the stack
+
+```
+export CLUSTER_NAME=default
+wget -O- "https://raw.githubusercontent.com/camptocamp/camptocamp-devops-stack/v0.15.0/scripts/provision.sh" | sh
+```{{execute}}
