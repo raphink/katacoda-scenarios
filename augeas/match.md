@@ -15,3 +15,6 @@ type:
 ```
 match etc/hosts/*/alias
 ```{{execute}}
+
+
+Where the star character stands for any subnode under the `etc/hosts` node.
