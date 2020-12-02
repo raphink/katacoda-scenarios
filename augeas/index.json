@@ -6,20 +6,20 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
-        "text": "step1.md"
+        "title": "Installation",
+        "text": "install.md"
       },
       {
-        "title": "Step 2",
-        "text": "step2.md"
+        "title": "Augtool",
+        "text": "augtool.md"
       },
       {
-        "title": "Step 3",
-        "text": "step3.md"
+        "title": "Loaded files and lenses",
+        "text": "loaded.md"
       },
       {
-        "title": "Step 4",
-        "text": "step4.md"
+        "title": "Inspecting files",
+        "text": "inspecting_files.md"
       }
     ],
     "intro": {
