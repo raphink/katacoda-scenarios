@@ -16,11 +16,7 @@ print /files/etc/hostname
 ```{{execute}}
 
 
-which maps the current `/etc/hostname` file:
-
-```
-cat /etc/hostname
-```{{execute T2}}
+which maps the current `/etc/hostname`{{open}} file.
 
 
 You can also use a relative path and ommit `/files/`, because the
