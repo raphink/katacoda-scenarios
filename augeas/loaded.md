@@ -4,7 +4,7 @@ loaded by Augeas, and the files associated to them.
 
 ```
 print /augeas/load/Hostname
-```{{execute}}
+```{{execute T1}}
 
 
 The previous command displays information on the `Hostname` module. The lens is
@@ -19,7 +19,7 @@ You can find metadata on these files by looking into `/augeas/files`:
 
 ```
 print /augeas/files/etc/hostname
-```{{execute}}
+```{{execute T1}}
 
 
 This confirms that this file is known by Augeas, and was successfully

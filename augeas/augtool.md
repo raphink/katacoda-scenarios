@@ -13,14 +13,14 @@ order to avoid breaking the system:
 ```
 mkdir fakeroot
 cp -a /etc fakeroot/
-```{{execute}}
+```{{execute T1}}
 
 
 Let's fire up `augtool`, pointing to the current directory as the fake root:
 
 ```
 augtool -r fakeroot/
-```{{execute}}
+```{{execute T1}}
 
 
 Augeas exposes a tree to manipulate its API. This tree has two nodes at the
@@ -32,4 +32,4 @@ root:
 
 ```
 ls /
-```{{execute}}
+```{{execute T1}}
