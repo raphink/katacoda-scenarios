@@ -67,7 +67,7 @@ module "cluster" {
   }
 
   app_of_apps_values_overrides = [
-<<EOF
+<&lt;EOF
 traefik:
   tolerations:
     - key: node-role.kubernetes.io/master
