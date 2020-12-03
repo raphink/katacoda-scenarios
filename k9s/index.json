@@ -1,0 +1,30 @@
+{
+  "title": "K9s",
+  "description": "K9s tutorial",
+  "difficulty": "Beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Installation",
+        "text": "install.md"
+      },
+      {
+        "title": "Pods",
+        "text": "pods.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}

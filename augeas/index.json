@@ -32,6 +32,10 @@
       {
         "title": "Saving the tree",
         "text": "save.md"
+      },
+      {
+        "title": "Saving modes",
+        "text": "save_modes.md"
       }
     ],
     "intro": {
