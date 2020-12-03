@@ -34,6 +34,10 @@ mkdir terraform
 
 
 <pre class="file" data-filename="my-project/terraform/main.tf" data-target="replace">
+locals {
+  base_domain = "test"
+}
+
 module "argocd" {
   source = "git::https://github.com/raphink/camptocamp-devops-stack.git//modules/argocd-helm?ref=app_of_apps_complex_vars"
 
@@ -42,7 +46,7 @@ module "argocd" {
   repo_url = "https://github.com/raphink/camptocamp-devops-stack.git"
   target_revision = "app_of_apps_complex_vars"
 
-  base_domain = "test"
+  base_domain = local.base_domain
   cluster_issuer = "ca-issuer"
 
   oidc                            = {
