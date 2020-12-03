@@ -11,3 +11,5 @@ docker run -ti \
   quay.io/derailed/k9s
 ```{{execute}}
 
+
+We can list the pods from all the running namespaces by typing `0`{{execute}}.
