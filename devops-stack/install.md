@@ -35,7 +35,7 @@ mkdir terraform
 
 <pre class="file" data-filename="my-project/terraform/main.tf" data-target="replace">
 locals {
-  base_domain = "test"
+  base_domain = "[[HOST_SUBDOMAIN]]-443-[[KATACODA_HOST]].environments.katacoda.com"
 }
 
 module "cluster" {
