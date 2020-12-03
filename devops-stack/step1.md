@@ -88,3 +88,12 @@ export CLUSTER_NAME=default
 ```
 wget -O- "https://raw.githubusercontent.com/camptocamp/camptocamp-devops-stack/v0.15.0/scripts/provision.sh" | sh
 ```{{execute}}
+
+
+## Inspect the cluster with K9s
+
+```
+docker run -ti \
+  -v ~/.kube/config:/root/.kube/config \
+  quay.io/derailed/k9s
+```{{execute}}
