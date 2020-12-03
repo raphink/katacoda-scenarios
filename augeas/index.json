@@ -42,7 +42,8 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal",
+    "showide": true
   },
   "backend": {
     "imageid": "ubuntu:2004"
