@@ -7,9 +7,14 @@ the pods from all namespaces by typing `0`{{execute}}.
 
 In every view, you can search for entries by using the `/` shortcut.
 For example, search for the `kube-proxy` pods by typing `/kube-proxy`{{execute}}
-then enter to validate the search.
+then Enter to validate the search.
+
+Pressing Enter on a pod line lets you inspect the containers in that pod.
+
+Press Escape to get back to the list of pods. You can see at the bottom of the
+screen the bread crumbs indicating the path you've followed in the K9s views.
 
 
 You can display pod logs with the `l`{{execute}} key. By default, only the logs
 from the last minute are displayed. Press `0`{{execute}} to display all the
-logs (or another numeral keys to choose another time frame).
+logs (or another numeral key to choose another time frame).
