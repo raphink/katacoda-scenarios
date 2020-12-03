@@ -38,7 +38,7 @@ locals {
   base_domain = "test"
 }
 
-module "argocd" {
+module "cluster" {
   source = "git::https://github.com/raphink/camptocamp-devops-stack.git//modules/argocd-helm?ref=app_of_apps_complex_vars"
 
   cluster_name = terraform.workspace
