@@ -6,16 +6,8 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
-        "text": "step1.md"
-      },
-      {
-        "title": "Step 2",
-        "text": "step2.md"
-      },
-      {
-        "title": "Step 3",
-        "text": "step3.md"
+        "title": "Install",
+        "text": "install.md"
       }
     ],
     "intro": {
