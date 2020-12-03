@@ -65,6 +65,20 @@ module "cluster" {
     enable         = true                                                           
     admin_password = random_password.admin_password.result                          
   }
+
+  app_of_apps_values_overrides = [
+<< EOF
+traefik:
+  ports:
+    web:
+      hostPort: 80
+    websecure:
+      hostPort: 443
+  service:
+    type: NodePort
+EOF
+,
+  ]
 }
 
 resource "random_password" "clientsecret" {
