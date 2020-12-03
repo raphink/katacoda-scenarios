@@ -55,6 +55,11 @@ module "argocd" {
     oauth2_proxy_extra_args = []
   }
 }
+
+resource "random_password" "clientsecret" {
+  length  = 16
+  special = false
+}
 </pre>
 
 
