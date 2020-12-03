@@ -58,9 +58,18 @@ module "argocd" {
     client_secret           = random_password.clientsecret.result
     oauth2_proxy_extra_args = []
   }
+  keycloak                  = {                                               
+    enable         = true                                                           
+    admin_password = random_password.admin_password.result                          
+  }
 }
 
 resource "random_password" "clientsecret" {
+  length  = 16
+  special = false
+}
+
+resource "random_password" "admin_password" {
   length  = 16
   special = false
 }
