@@ -69,6 +69,10 @@ module "cluster" {
   app_of_apps_values_overrides = [
 <<EOF
 traefik:
+  tolerations:
+    - key: node-role.kubernetes.io/master
+      operator: Exists
+      effect: NoSchedule
   ports:
     web:
       hostPort: 80
