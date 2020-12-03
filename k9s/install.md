@@ -12,4 +12,4 @@ docker run -ti \
 ```{{execute}}
 
 
-We can list the pods from all the running namespaces by typing `0`{{execute}}.
+We can list the cluster nodes by typing `:nodes`{{execute}}.
