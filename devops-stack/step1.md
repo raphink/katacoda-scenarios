@@ -35,12 +35,12 @@ mkdir terraform
 
 <pre class="file" data-filename="my-project/terraform/main.tf" data-target="replace">
 module "argocd" {
-  source = "git::https://github.com/raphink/camptocamp-devops-stack.git//modules/argocd-helm?ref=app_of_apps"
+  source = "git::https://github.com/raphink/camptocamp-devops-stack.git//modules/argocd-helm?ref=app_of_apps_complex_vars"
 
   cluster_name = terraform.workspace
 
-  repo_url = "https://github.com/raphink/camptocamp-devops-stack.git?ref="
-  target_revision = "app_of_apps"
+  repo_url = "https://github.com/raphink/camptocamp-devops-stack.git"
+  target_revision = "app_of_apps_complex_vars"
 
   base_domain = "test"
   cluster_issuer = "ca-issuer"
