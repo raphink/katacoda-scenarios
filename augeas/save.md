@@ -15,6 +15,9 @@ will see `fakeroot/etc/hosts` updated on disk:
 cat fakeroot/etc/hosts
 ```{{execute T2}}
 
+
+Check that only the modified alias field was changed in the file.
+
 If errors occur (for example because Augeas was not able to validate a value),
 you can see what went wrong by typing:
 
