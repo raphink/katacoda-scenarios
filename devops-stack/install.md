@@ -117,4 +117,4 @@ wget -O- "https://raw.githubusercontent.com/camptocamp/camptocamp-devops-stack/v
 docker run -ti \
   -v ~/.kube/config:/root/.kube/config \
   quay.io/derailed/k9s
-```{{execute}}
+```{{execute T2}}
