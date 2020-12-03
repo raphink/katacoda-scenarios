@@ -67,7 +67,7 @@ module "cluster" {
   }
 
   app_of_apps_values_overrides = [
-<< EOF
+<<EOF
 traefik:
   ports:
     web:
