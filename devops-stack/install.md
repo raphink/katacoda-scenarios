@@ -49,7 +49,7 @@ module "cluster" {
   base_domain = local.base_domain
   cluster_issuer = "ca-issuer"
 
-  oidc                            = {
+  oidc      = {
     issuer_url              = format("https://keycloak.apps.%s/auth/realms/kubernetes", local.base_domain)
     oauth_url               = format("https://keycloak.apps.%s/auth/realms/kubernetes/protocol/openid-connect/auth", local.base_domain)
     token_url               = format("https://keycloak.apps.%s/auth/realms/kubernetes/protocol/openid-connect/token", local.base_domain)
@@ -58,7 +58,10 @@ module "cluster" {
     client_secret           = random_password.clientsecret.result
     oauth2_proxy_extra_args = []
   }
-  keycloak                  = {                                               
+  olm       = {
+    enable = true
+  }
+  keycloak  = {                                               
     enable         = true                                                           
     admin_password = random_password.admin_password.result                          
   }
