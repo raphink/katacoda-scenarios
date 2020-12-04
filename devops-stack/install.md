@@ -114,7 +114,7 @@ wget -O- "https://raw.githubusercontent.com/camptocamp/camptocamp-devops-stack/v
 ## Inspect the cluster with K9s
 
 ```
-docker run -ti \
+docker run -ti --net host \
   -v ~/.kube/config:/root/.kube/config \
   quay.io/derailed/k9s
 ```{{execute T2}}
