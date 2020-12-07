@@ -1,5 +1,10 @@
 Start by launching the Kubernetes cluster with `launch.sh`{{execute}}.
 
+Note that the DevOps Stack allows to provision Kubernetes clusters (on EKS,
+AKS & K3s at the moment), but Katacoda is not a proper environment for these
+use cases, as they require either credentials (EKS/AKS) or lots of resources
+(for a local K3s cluster on a single node).
+
 Verify that the cluster is up by listing the nodes with `kubectl get nodes`{{execute}}
 
 
