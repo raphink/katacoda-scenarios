@@ -164,3 +164,5 @@ with the login `admin`/`argocd`.
 Current caveats:
   - there is no Storage Class on Katacoda, which prevents Keycloak, Prometheus,
     & Alertmanager from starting.
+  - Cert manager in the DevOps Stack is currently not set up to use HTTP challenges with
+    LetsEncrypt, so we're using self-signed certificates for now.
