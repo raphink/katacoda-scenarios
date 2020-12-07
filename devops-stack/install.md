@@ -64,7 +64,7 @@ module "cluster" {
   keycloak   = {                                               
     enable         = true                                                           
     admin_password = random_password.admin_password.result                          
-    domain         = "argocd.${local.base_domain}"
+    domain         = "keycloak.${local.base_domain}"
   }
   argocd     = {
     domain = "argocd.${local.base_domain}"
