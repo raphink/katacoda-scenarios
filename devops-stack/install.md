@@ -132,6 +132,9 @@ wget -O- "https://raw.githubusercontent.com/camptocamp/camptocamp-devops-stack/v
 
 ## Inspect the cluster with K9s
 
+
+While the stack is deploying, you can start K9s in a new terminal with:
+
 ```
 docker run -ti --net host \
   -v ~/.kube/config:/root/.kube/config \
