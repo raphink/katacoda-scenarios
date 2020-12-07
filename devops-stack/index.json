@@ -8,6 +8,10 @@
       {
         "title": "Install",
         "text": "install.md"
+      },
+      {
+        "title": "Inspect Services",
+        "text": "services.md"
       }
     ],
     "intro": {
