@@ -150,7 +150,8 @@ you will observe the following:
  - Deployment of [OLM](https://github.com/operator-framework/operator-lifecycle-manager) as a pre-requisite to operators
  - Deployment of the Kube Prometheus Stack for monitoring and observability
  - Deployment of [Traefik](https://traefik.io/) as Ingress Controller
- - Deployment of [Keycloak](https://www.keycloak.org/)
+ - Deployment of [Keycloak](https://www.keycloak.org/) for SSO authentication
+   of all apps
  - Deployment of the App of Apps itself
  - Deployment of [Cert Manager](https://cert-manager.io/)
  - Re-deployment of ArgoCD as an Argo CD application
