@@ -159,3 +159,8 @@ forwarding port `8080` to `8080` on `0.0.0.0`, then
 [accessing it in your browser](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com),
 with the login `admin`/`argocd`.
 
+
+
+Current caveats:
+  - there is no Storage Class on Katacoda, which prevents Keycloak, Prometheus,
+    & Alertmanager from starting.
