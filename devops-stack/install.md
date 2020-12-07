@@ -154,7 +154,8 @@ you will observe the following:
    of all apps
  - Deployment of the App of Apps itself
  - Deployment of [Cert Manager](https://cert-manager.io/)
- - Re-deployment of ArgoCD as an Argo CD application
+ - Re-deployment of ArgoCD as an Argo CD application, with SSO authentication
+   & an ingress using a Cert Manager issued certificate
  - Deployment of [Loki](https://grafana.com/oss/loki/) for log management
  - Deployment of the Metrics Server
 
