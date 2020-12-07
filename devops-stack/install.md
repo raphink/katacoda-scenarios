@@ -85,6 +85,8 @@ module "cluster" {
     domain = "alertmanager.${local.base_domain}"
   }
 
+  # By default, Traefik uses an external load-balancer, but
+  # Katacoda doesn't allow that, so we'll use hostPorts instead.
   app_of_apps_values_overrides = [
 <&lt;EOF
 traefik:
