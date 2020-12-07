@@ -137,3 +137,25 @@ docker run -ti --net host \
   -v ~/.kube/config:/root/.kube/config \
   quay.io/derailed/k9s
 ```{{execute T2}}
+
+By watching all the pods (with `:pods`{{execute T2}} then `0`{{execute T2}})
+and/or the ArgoCD applications (with `:applications`{{execute T2}}),
+you will observe the following:
+ - Deployment of ArgoCD as a Helm chart
+ - Deployment of [OLM](https://github.com/operator-framework/operator-lifecycle-manager) as a pre-requisite to operators
+ - Deployment of the Kube Prometheus Stack for monitoring and observability
+ - Deployment of [Traefik](https://traefik.io/) as Ingress Controller
+ - Deployment of [Keycloak](https://www.keycloak.org/)
+ - Deployment of the App of Apps itself
+ - Deployment of [Cert Manager](https://cert-manager.io/)
+ - Re-deployment of ArgoCD as an Argo CD application
+ - Deployment of [Loki](https://grafana.com/oss/loki/) for log management
+ - Deployment of the Metrics Server
+
+
+You can also follow these steps by setting up a port forward on the ArgoCD
+server (in the K9s Pod view, select the ArgoCD server pod and hit Shift+F)
+forwarding port `8080` to `8080` on `0.0.0.0`, then
+[accessing it in your browser](https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com),
+with the login `admin`/`argocd`.
+
