@@ -70,7 +70,7 @@ module "cluster" {
     domain = "argocd.${local.base_domain}"
   }
   grafana    = {
-    generic_oauth_extra_args = []
+    generic_oauth_extra_args = {}
     domain                   = "grafana.${local.base_domain}"
   }
   prometheus = {
