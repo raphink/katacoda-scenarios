@@ -39,12 +39,12 @@ locals {
 }
 
 module "cluster" {
-  source = "git::https://github.com/raphink/camptocamp-devops-stack.git//modules/argocd-helm?ref=app_of_apps_complex_vars"
+  source = "git::https://github.com/camptocamp/camptocamp-devops-stack.git//modules/argocd-helm?ref=v0.17.0"
 
   cluster_name = terraform.workspace
 
-  repo_url = "https://github.com/raphink/camptocamp-devops-stack.git"
-  target_revision = "app_of_apps_complex_vars"
+  repo_url = "https://github.com/camptocamp/camptocamp-devops-stack.git"
+  target_revision = "v0.17.0"
 
   base_domain = local.base_domain
   cluster_issuer = "ca-issuer"
@@ -107,7 +107,7 @@ export CLUSTER_NAME=default
 ## Launch the stack
 
 ```
-wget -O- "https://raw.githubusercontent.com/camptocamp/camptocamp-devops-stack/v0.15.0/scripts/provision.sh" | sh
+wget -O- "https://raw.githubusercontent.com/camptocamp/camptocamp-devops-stack/v0.17.0/scripts/provision.sh" | sh
 ```{{execute}}
 
 
