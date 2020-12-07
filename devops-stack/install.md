@@ -39,31 +39,45 @@ locals {
 }
 
 module "cluster" {
-  source = "git::https://github.com/camptocamp/camptocamp-devops-stack.git//modules/argocd-helm?ref=v0.17.0"
+  source = "git::https://github.com/raphink/camptocamp-devops-stack.git//modules/argocd-helm?ref=app_domain"
 
   cluster_name = terraform.workspace
 
-  repo_url = "https://github.com/camptocamp/camptocamp-devops-stack.git"
-  target_revision = "v0.17.0"
+  repo_url = "https://github.com/raphink/camptocamp-devops-stack.git"
+  target_revision = "app_domain"
 
   base_domain = local.base_domain
   cluster_issuer = "ca-issuer"
 
-  oidc      = {
-    issuer_url              = format("https://keycloak.apps.%s/auth/realms/kubernetes", local.base_domain)
-    oauth_url               = format("https://keycloak.apps.%s/auth/realms/kubernetes/protocol/openid-connect/auth", local.base_domain)
-    token_url               = format("https://keycloak.apps.%s/auth/realms/kubernetes/protocol/openid-connect/token", local.base_domain)
-    api_url                 = format("https://keycloak.apps.%s/auth/realms/kubernetes/protocol/openid-connect/userinfo", local.base_domain)
+  oidc       = {
+    issuer_url              = format("https://keycloak.%s/auth/realms/kubernetes", local.base_domain)
+    oauth_url               = format("https://keycloak.%s/auth/realms/kubernetes/protocol/openid-connect/auth", local.base_domain)
+    token_url               = format("https://keycloak.%s/auth/realms/kubernetes/protocol/openid-connect/token", local.base_domain)
+    api_url                 = format("https://keycloak.%s/auth/realms/kubernetes/protocol/openid-connect/userinfo", local.base_domain)
     client_id               = "applications"
     client_secret           = random_password.clientsecret.result
     oauth2_proxy_extra_args = []
   }
-  olm       = {
+  olm        = {
     enable = true
   }
-  keycloak  = {                                               
+  keycloak   = {                                               
     enable         = true                                                           
     admin_password = random_password.admin_password.result                          
+    domain         = "argocd.${local.base_domain}"
+  }
+  argocd     = {
+    domain = "argocd.${local.base_domain}"
+  }
+  grafana    = {
+    generic_oauth_extra_args = []
+    grafana                  = "grafana.${local.base_domain}"
+  }
+  prometheus = {
+    domain = "prometheus.${local.base_domain}"
+  }
+  alertmanager = {
+    domain = "alertmanager.${local.base_domain}"
   }
 
   app_of_apps_values_overrides = [
