@@ -146,7 +146,7 @@ docker run -ti --net host \
 By watching all the pods (with `:pods`{{execute T2}} then `0`{{execute T2}})
 and/or the ArgoCD applications (with `:applications`{{execute T2}}),
 you will observe the following:
- - Deployment of ArgoCD as a Helm chart
+ - Deployment of [ArgoCD](https://argoproj.github.io/argo-cd/) as a Helm chart
  - Deployment of [OLM](https://github.com/operator-framework/operator-lifecycle-manager) as a pre-requisite to operators
  - Deployment of the Kube Prometheus Stack for monitoring and observability
  - Deployment of [Traefik](https://traefik.io/) as Ingress Controller
