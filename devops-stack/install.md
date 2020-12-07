@@ -71,7 +71,7 @@ module "cluster" {
   }
   grafana    = {
     generic_oauth_extra_args = []
-    grafana                  = "grafana.${local.base_domain}"
+    domain                   = "grafana.${local.base_domain}"
   }
   prometheus = {
     domain = "prometheus.${local.base_domain}"
