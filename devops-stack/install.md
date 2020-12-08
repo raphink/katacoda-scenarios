@@ -55,13 +55,12 @@ module "cluster" {
   cluster_issuer = "ca-issuer"
 
   oidc       = {
-    issuer_url              = format("https://keycloak.%s/auth/realms/kubernetes", local.base_domain)
-    oauth_url               = format("https://keycloak.%s/auth/realms/kubernetes/protocol/openid-connect/auth", local.base_domain)
-    token_url               = format("https://keycloak.%s/auth/realms/kubernetes/protocol/openid-connect/token", local.base_domain)
-    api_url                 = format("https://keycloak.%s/auth/realms/kubernetes/protocol/openid-connect/userinfo", local.base_domain)
-    client_id               = "applications"
-    client_secret           = random_password.clientsecret.result
-    oauth2_proxy_extra_args = []
+    issuer_url    = format("https://keycloak.%s/auth/realms/kubernetes", local.base_domain)
+    oauth_url     = format("https://keycloak.%s/auth/realms/kubernetes/protocol/openid-connect/auth", local.base_domain)
+    token_url     = format("https://keycloak.%s/auth/realms/kubernetes/protocol/openid-connect/token", local.base_domain)
+    api_url       = format("https://keycloak.%s/auth/realms/kubernetes/protocol/openid-connect/userinfo", local.base_domain)
+    client_id     = "applications"
+    client_secret = random_password.clientsecret.result
   }
   olm        = {
     enable = true
@@ -75,8 +74,7 @@ module "cluster" {
     domain = "argocd.${local.base_domain}"
   }
   grafana    = {
-    generic_oauth_extra_args = {}
-    domain                   = "grafana.${local.base_domain}"
+    domain = "grafana.${local.base_domain}"
   }
   prometheus = {
     domain = "prometheus.${local.base_domain}"
