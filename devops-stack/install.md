@@ -145,12 +145,12 @@ By watching all the pods (with `:pods`{{execute T2}} then `0`{{execute T2}})
 and/or the ArgoCD applications (with `:applications`{{execute T2}}),
 you will observe the following:
  - Deployment of [ArgoCD](https://argoproj.github.io/argo-cd/) as a Helm chart
+ - Deployment of the App of Apps
  - Deployment of [OLM](https://github.com/operator-framework/operator-lifecycle-manager) as a pre-requisite to operators
  - Deployment of the Kube Prometheus Stack for monitoring and observability
  - Deployment of [Traefik](https://traefik.io/) as Ingress Controller
  - Deployment of [Keycloak](https://www.keycloak.org/) for SSO authentication
    of all apps
- - Deployment of the App of Apps itself
  - Deployment of [Cert Manager](https://cert-manager.io/)
  - Re-deployment of ArgoCD as an Argo CD application, with SSO authentication
    & an ingress using a Cert Manager issued certificate
